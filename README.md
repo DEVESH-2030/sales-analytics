@@ -25,7 +25,7 @@
 ![Screenshot from 2023-11-07 08-18-19](https://github.com/DEVESH-2030/sales-analytics/assets/73014162/dac4e051-d737-4f66-b925-54f4d40b824f)
 
 
-### create laravel project
+### Create laravel project
 - composer create-project laravel/laravel sales-analytics
 - Installed laravel ui
 - install laravel vite
@@ -52,7 +52,19 @@
     npm run dev
 
 ```
+### Database 
+- created a database with this name sales_analytics
+- Created migrations / tables for the related to the sales management and store the records
+- Created seeders for User, Category, Product, Sales, and Order tables and store some records
+- For database: please run commands
+  '''
+       php artisan migrate
+       php artisan db:seed
+       or
 
+      php artisan migrate:fresh --seed
+  '''
+- 
 
 ## About Laravel
 
