@@ -32,7 +32,7 @@
 
 
 ### Created Controller
-- Dashboard controll
+- Dashboard controller 
 - User Controller, SalesController, OrderController, ProductController
 
 ### Added Route
@@ -63,8 +63,20 @@
        or
 
       php artisan migrate:fresh --seed
-  '''
 - 
+
+### Dashboard Page
+- If user trying to register it can be registered easily and directly login or moved on dashboard page after registration successfully.
+- You can log out from the dashboard to click on top right button where seen the name of logged in user name.
+- When you are click here then will open popup for log out
+
+- Ans also you can logout click on the log out button on dashboard sidebar
+  
+### Get all sales analytics
+- To get all sales analytics dynamic data to click the mene of Get all Analytics on dashboard sidebar
+- And also you can see separately analytics pages which given by the menus on dashboard sidebar.
+- The records will be dynamic which you have seen 
+
 
 ## About Laravel
 
