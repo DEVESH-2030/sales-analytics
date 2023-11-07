@@ -43,8 +43,8 @@
                 <div class="col-md-8">
                     <div class="card chart-card">
                         <div class="card-body">
-                            <h2 class="card-title text-center">Customer Acquisition</h2>
-                            <canvas id="customerAcquisitionChart" width="400" height="200"></canvas>
+                            <h2 class="card-title text-center">Top-Selling Products</h2>
+                            <canvas id="topSellingProductsChart" width="400" height="200"></canvas>
                         </div>
                     </div>
                 </div>
@@ -53,22 +53,29 @@
     </div>
 
     <script>
-        var users = <?php echo json_encode($users); ?>;
 
-        var months = users.map(item => item.month)
-        var totalUsers = users.map(item => item.total_user)
+        var totalSellingProducts = <?php echo json_encode($totalSellingProducts); ?>;
 
-        function customerAcquisition() {
-            var customerAcquisitionData = {
-                labels: months,
+        var productName = totalSellingProducts.map(item => item.product)
+        var productSaled = totalSellingProducts.map(item => item.total_sale)
+
+        function topSellingProductChart () {
+
+            var topSellingProductsData = {
+                labels: productName,
                 datasets: [{
-                    label: 'New Customers',
-                    data: totalUsers,
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
+                    label: 'Units Sold',
+                    data: productSaled,
+                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
                     borderWidth: 1
                 }]
             };
+
 
             // Chart.js configurations for each chart
             var chartOptions = {
@@ -79,16 +86,15 @@
                 }
             };
 
-            new Chart(document.getElementById('customerAcquisitionChart').getContext('2d'), {
+            new Chart(document.getElementById('topSellingProductsChart').getContext('2d'), {
                 type: 'bar',
-                data: customerAcquisitionData,
+                data: topSellingProductsData,
                 options: chartOptions
             });
         }
 
-        customerAcquisition()
+        topSellingProductChart()
     </script>
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>

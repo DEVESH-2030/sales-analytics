@@ -18,20 +18,38 @@ class OrderSeeder extends Seeder
             [
                 'user_id' => 1,
                 'product_id' => 1,
-                'total_amount' => 99.99,
-                'status' => 'completed',
+                'total_amount' => 990,
+                'status' => 'Shipped',
             ],
             [
                 'user_id' => 2,
                 'product_id' => 2,
-                'total_amount' => 49.99,
-                'status' => 'pending',
+                'total_amount' => 400,
+                'status' => 'Processing',
             ],
             [
                 'user_id' => 3,
                 'product_id' => 3,
                 'total_amount' => 129.99,
-                'status' => 'processing',
+                'status' => 'Delivered',
+            ],
+            [
+                'user_id' => 1,
+                'product_id' => 1,
+                'total_amount' => 190.50,
+                'status' => 'Shipped',
+            ],
+            [
+                'user_id' => 2,
+                'product_id' => 2,
+                'total_amount' => 150.09,
+                'status' => 'Processing',
+            ],
+            [
+                'user_id' => 3,
+                'product_id' => 3,
+                'total_amount' => 50.80,
+                'status' => 'Delivered',
             ],
         ];
 

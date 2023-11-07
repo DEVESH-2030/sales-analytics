@@ -8,12 +8,30 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
+    protected $view;
+
+    public function __construct()
+    {
+        $this->view = '.dashboard.pages.';
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $sellingProducts = Product::with('sales')->get();
+
+        $totalSellingProducts = [];
+
+        foreach($sellingProducts as $sellingProduct) {
+           
+            $totalSellingProducts[] = [
+                'product' => $sellingProduct->name,
+                'total_sale' => $sellingProduct->sales->count() ?? 0,
+            ];
+        }
+        return view($this->view . 'total-selling-product', compact('totalSellingProducts'));
     }
 
     /**

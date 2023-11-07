@@ -2,18 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreOrderRequest;
 use App\Http\Requests\UpdateOrderRequest;
-use App\Models\Order;
 
 class OrderController extends Controller
 {
+    protected $view;
+
+    public function __construct()
+    {
+        $this->view = '.dashboard.pages.';
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $orders = Order::select('status', DB::raw('count(id) as total_orders'))
+            ->groupBy('status')
+            ->get();
+
+        return view($this->view . 'order-status', compact('orders'));
     }
 
     /**

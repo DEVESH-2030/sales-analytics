@@ -43,8 +43,8 @@
                 <div class="col-md-8">
                     <div class="card chart-card">
                         <div class="card-body">
-                            <h2 class="card-title text-center">Customer Acquisition</h2>
-                            <canvas id="customerAcquisitionChart" width="400" height="200"></canvas>
+                            <h2 class="card-title text-center">Revenue Trends</h2>
+                            <canvas id="revenueTrendsChart" width="400" height="200"></canvas>
                         </div>
                     </div>
                 </div>
@@ -53,40 +53,37 @@
     </div>
 
     <script>
-        var users = <?php echo json_encode($users); ?>;
+        // get total sale dynamic data
+        var revenues = <?php echo json_encode($revenues); ?>;
 
-        var months = users.map(item => item.month)
-        var totalUsers = users.map(item => item.total_user)
+        var revenueMonths = revenues.map(item => item.month)
+        var revenueAmount = revenues.map(item => item.amount)
 
-        function customerAcquisition() {
-            var customerAcquisitionData = {
-                labels: months,
-                datasets: [{
-                    label: 'New Customers',
-                    data: totalUsers,
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1
-                }]
-            };
+        var revenueTrendsData = {
+            labels: revenueMonths,
+            datasets: [{
+                label: 'Revenue',
+                data: revenueAmount,
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        };
 
-            // Chart.js configurations for each chart
-            var chartOptions = {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
+        // Chart.js configurations for each chart
+        var chartOptions = {
+            scales: {
+                y: {
+                    beginAtZero: true
                 }
-            };
+            }
+        };
 
-            new Chart(document.getElementById('customerAcquisitionChart').getContext('2d'), {
-                type: 'bar',
-                data: customerAcquisitionData,
-                options: chartOptions
-            });
-        }
-
-        customerAcquisition()
+        new Chart(document.getElementById('revenueTrendsChart').getContext('2d'), {
+            type: 'line',
+            data: revenueTrendsData,
+            options: chartOptions
+        });
     </script>
 
 

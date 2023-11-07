@@ -56,9 +56,18 @@
                     </a>
                 </li> --}}
 
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('dashboard.analytics') }}">
+                        <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">All Analytics Data</span>
+                    </a>
+                </li>
+
                 {{-- total sales menu --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="./pages/dashboard.html">
+                    <a class="nav-link" href="{{ route('dashboard.total-sales') }}">
                         <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
                         </div>
@@ -68,7 +77,7 @@
 
                 {{-- total sellin products --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="./pages/dashboard.html">
+                    <a class="nav-link" href="{{ route('dashboard.total-selling-product') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-app text-info text-sm opacity-10"></i>
@@ -79,7 +88,7 @@
 
                 {{-- sales by category --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="./pages/dashboard.html">
+                    <a class="nav-link" href="{{ route('dashboard.sales-by-category') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
@@ -90,7 +99,7 @@
 
                 {{-- revenue trends --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="./pages/dashboard.html">
+                    <a class="nav-link" href="{{ route('dashboard.revenue-trends') }}">
                         <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
@@ -101,7 +110,7 @@
 
                 {{-- order sratus --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="./pages/dashboard.html">
+                    <a class="nav-link" href="{{ route('dashboard.order-status') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
@@ -112,7 +121,7 @@
 
                 {{-- customer acquisition --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="./pages/dashboard.html">
+                    <a class="nav-link" href="{{ route('dashboard.customer-acquisition') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
@@ -128,7 +137,7 @@
                     </h6>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{('')}}">
+                    <a class="nav-link" href="#">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
@@ -910,6 +919,7 @@
 
     </main>
 
+    {{-- setting --}}
     <div class="fixed-plugin">
         <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
             <i class="fa fa-cog py-2"> </i>

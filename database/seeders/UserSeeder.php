@@ -20,19 +20,37 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Test User',
                 'email' => 'test@gmail.com',
-                'password' => Hash::make('test@123'),
+                'password' => Hash::make('12345678'),
                 'email_verified_at' => Carbon::now(),
             ],
             [
                 'name' => 'Default User',
                 'email' => 'default@gmail.com',
-                'password' => Hash::make('test@123'),
+                'password' => Hash::make('12345678'),
                 'email_verified_at' => Carbon::now(),
             ],
             [
                 'name' => 'New User',
                 'email' => 'new@gmail.com',
-                'password' => Hash::make('test@123'),
+                'password' => Hash::make('12345678'),
+                'email_verified_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Tulsi Ver',
+                'email' => 'tulsi@gmail.com',
+                'password' => Hash::make('12345678'),
+                'email_verified_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Darshan Kumar',
+                'email' => 'darshan@gmail.com',
+                'password' => Hash::make('12345678'),
+                'email_verified_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'Dev Yadav',
+                'email' => 'dev@example.com',
+                'password' => Hash::make('12345678'),
                 'email_verified_at' => Carbon::now(),
             ],
         ];

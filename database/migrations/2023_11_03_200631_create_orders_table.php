@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('product_id');
             $table->decimal('total_amount', config('variable.floting_value'));
-            $table->enum('status', ['pending', 'processing', 'completed', 'canceled']);
+            $table->enum('status', ['Shipped', 'Processing', 'Delivered', 'Canceled']);
 
             // Foreign key relationship to products and users table
             $table->foreign('user_id')

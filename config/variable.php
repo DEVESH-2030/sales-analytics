@@ -13,5 +13,10 @@ return [
     |
     */
 
-    'floting_value' => 10, 2
+    'floting_value' => 10, 2,
+
+    'sort_months' => "FIELD(month, 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')",
+
+    'sales_raw_query' => "DATE_FORMAT(sale_date, '%b') as month, SUM(total_amount) as amount",
+    
 ];
