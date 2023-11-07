@@ -73,9 +73,10 @@
 - Ans also you can logout click on the log out button on dashboard sidebar
   
 ### Get all sales analytics
-- To get all sales analytics dynamic data to click the mene of Get all Analytics on dashboard sidebar
+- To get all sales analytics dynamic data to click the mene of  All Analytics Data on dashboard sidebar
 - And also you can see separately analytics pages which given by the menus on dashboard sidebar.
-- The records will be dynamic which you have seen 
+- The records will be dynamic which you have seen
+- Showing all count of total users, total sales, tota product, but total money not calculated on dashboard header 
 
 
 ## About Laravel
