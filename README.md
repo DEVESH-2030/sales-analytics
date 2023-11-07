@@ -1,5 +1,30 @@
 # Sales Analytics Management 
 
+### screenshots
+![Screenshot from 2023-11-07 08-17-08](https://github.com/DEVESH-2030/sales-analytics/assets/73014162/1fca945d-a5fe-4f50-a8b6-a9416d24bd6c)
+
+![Screenshot from 2023-11-07 08-18-36](https://github.com/DEVESH-2030/sales-analytics/assets/73014162/684eaddd-1f19-4637-8a8b-f3047568d930)
+
+![Screenshot from 2023-11-07 08-18-41](https://github.com/DEVESH-2030/sales-analytics/assets/73014162/d716d482-9fea-4519-87eb-d96b1bf985e7)
+
+
+![Screenshot from 2023-11-07 08-17-18](https://github.com/DEVESH-2030/sales-analytics/assets/73014162/f4e47fbb-2456-4361-8906-5d8f21f55ce0)
+
+![Screenshot from 2023-11-07 08-17-22](https://github.com/DEVESH-2030/sales-analytics/assets/73014162/2347be53-c1a7-4525-bdc3-dbc01a5efbaa)
+
+![Screenshot from 2023-11-07 08-17-22](https://github.com/DEVESH-2030/sales-analytics/assets/73014162/6420ed14-f794-419d-b6d7-ebc6cd1be7f2)
+
+![Screenshot from 2023-11-07 08-17-50](https://github.com/DEVESH-2030/sales-analytics/assets/73014162/bc7874c9-7f5f-4771-a341-c5cc7b5e9447)
+
+![Screenshot from 2023-11-07 08-17-57](https://github.com/DEVESH-2030/sales-analytics/assets/73014162/9877f5f5-12b0-41f7-9ef7-f654b819f9aa)
+
+![Screenshot from 2023-11-07 08-18-03](https://github.com/DEVESH-2030/sales-analytics/assets/73014162/ca0de906-5765-4f53-95ba-88f0ab2e2ad3)
+
+![Screenshot from 2023-11-07 08-18-12](https://github.com/DEVESH-2030/sales-analytics/assets/73014162/837744f9-5a85-4f44-b457-4e03063c602d)
+
+![Screenshot from 2023-11-07 08-18-19](https://github.com/DEVESH-2030/sales-analytics/assets/73014162/dac4e051-d737-4f66-b925-54f4d40b824f)
+
+
 ### create laravel project
 - composer create-project laravel/laravel sales-analytics
 - Installed laravel ui
