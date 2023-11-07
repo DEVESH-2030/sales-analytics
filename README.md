@@ -57,13 +57,33 @@
 - Created migrations / tables for the related to the sales management and store the records
 - Created seeders for User, Category, Product, Sales, and Order tables and store some records
 - For database: please run commands
-  '''
-       php artisan migrate
-       php artisan db:seed
-       or
+```
+    php artisan migrate
 
-      php artisan migrate:fresh --seed
-- 
+    php artisan db:seed
+
+       OR
+
+    php artisan migrate:fresh --seed
+
+```
+- before run migration and seeder comand please run these following
+  ```
+      composer update
+    
+      composer dump-autoloa
+
+      php artisan optimize:clear
+
+      php artisan cache:clear
+
+      php artisan config:clear
+
+      php artisan view:clear
+
+      php artisan route:clear
+  
+  ```
 
 ### Dashboard Page
 - If user trying to register it can be registered easily and directly login or moved on dashboard page after registration successfully.
